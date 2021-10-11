@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+mainmenu{
+  height: 10%;
+}
+.header {
+  background-image: linear-gradient(120deg, #04098e, #861a78); 
+}
+.titulo {
+    flex: 1 1 auto;
+}
+img {
+  height: 5rem;
+}
+
