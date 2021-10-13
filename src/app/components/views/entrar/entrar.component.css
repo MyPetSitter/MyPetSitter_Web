@@ -1,4 +1,4 @@
-.login-form {width: 330px;margin: 40px auto;}
+.login-form {width: 330px;margin: 40px auto; color: black;}
 .login-form h2 {font-size: 19px;margin-bottom: 15px;text-align: center;}
 .login-form form {        
     background: #f7f7f7;
@@ -8,7 +8,14 @@
 } 
 .login-form .avatar {width: 90px;margin-bottom: 20px;}
 .login-form .form-control, .login-form .btn {min-height: 38px;}
-.login-form .btn {font-size: 15px;font-weight: bold;border-radius: 2px;}
+.login-form .btn {
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 2px; 
+    width: 100%; 
+    color: #ff0059; 
+    background-color: #0802b5;
+}
 .form-group2 {margin-top: 5px; margin-bottom: 10px; text-align: center;}
 clearfix{height: 1px}
 form2 {
@@ -23,5 +30,6 @@ text-center {text-align: center;}
 text-right {text-align: right;}
 text-left {text-align: left;}
 img {display: block; margin-left: auto; margin-right: auto;}
-a:link {text-decoration: none;}
+a:link {text-decoration: none;color: #ff0059;}
 a:hover {text-decoration: underline;}
+a:visited {color: #ff0059;}
