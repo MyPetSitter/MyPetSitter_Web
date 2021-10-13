@@ -21,7 +21,8 @@ import { ComoFuncionaComponent } from './components/views/como-funciona/como-fun
 import {MatIconModule} from '@angular/material/icon';
 import { QueroSerPetsitterComponent } from './components/views/quero-ser-petsitter/quero-ser-petsitter.component';
 import { EntrarComponent } from './components/views/entrar/entrar.component';
-
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 
 @NgModule({
@@ -34,7 +35,7 @@ import { EntrarComponent } from './components/views/entrar/entrar.component';
     CriarContaComponent,
     ComoFuncionaComponent,
     QueroSerPetsitterComponent,
-    EntrarComponent
+    EntrarComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,6 +52,8 @@ import { EntrarComponent } from './components/views/entrar/entrar.component';
     FormsModule,
     ReactiveFormsModule,
     MatIconModule,
+    MatCheckboxModule,
+    MatSlideToggleModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
