@@ -1,0 +1,27 @@
+.base {
+    border-style: solid; 
+    margin: 1.7rem auto 0 auto;
+}
+.top {
+    width: 95%;
+}
+.middle {
+    width: 95%;
+}
+.bottom {
+    width: 95%;
+}
+.middle-base1 {
+    text-align: center;
+    width: 20%;
+    display: inline-block;
+    height: 90%;
+    margin: 9px;
+}
+.middle-base2 {
+    text-align: center;
+    width: 75%;
+    display: inline-block;
+    height: 90%;
+    margin: 9px;
+}
