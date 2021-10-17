@@ -4,6 +4,7 @@ import { ComoFuncionaComponent } from './components/views/como-funciona/como-fun
 import { CriarContaComponent } from './components/views/criar-conta/criar-conta.component';
 import { EntrarComponent } from './components/views/entrar/entrar.component';
 import { HomeComponent } from './components/views/home/home.component';
+import { PetsitterPerfilComponent } from './components/views/petsitter-perfil/petsitter-perfil.component';
 import { QueroSerPetsitterComponent } from './components/views/quero-ser-petsitter/quero-ser-petsitter.component';
 
 const routes: Routes = [
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'entrar',
     component: EntrarComponent
+  },
+  {
+    path: 'petsitterperfil',
+    component: PetsitterPerfilComponent
   },
 
 ];

@@ -23,6 +23,7 @@ import { QueroSerPetsitterComponent } from './components/views/quero-ser-petsitt
 import { EntrarComponent } from './components/views/entrar/entrar.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { PetsitterPerfilComponent } from './components/views/petsitter-perfil/petsitter-perfil.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     ComoFuncionaComponent,
     QueroSerPetsitterComponent,
     EntrarComponent,
+    PetsitterPerfilComponent,
   ],
   imports: [
     BrowserModule,

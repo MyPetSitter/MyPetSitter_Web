@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 mainmenu{height: 10%;}
-.header {background-image: linear-gradient(120deg, #04098e, #861a78);}
+.header {background-color: #1E1E1E;}
 .titulo {flex: 1 1 auto;text-align: left;}
 img {height: 5rem;}
 
