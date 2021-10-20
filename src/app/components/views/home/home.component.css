@@ -1,0 +1,33 @@
+.home {
+    text-align: center;
+    width: 100%;
+    margin: 2rem auto 0 auto;
+}
+mat-form-field {
+    display: block;
+    width: 50%;
+    margin: 2rem auto 0 auto;
+}
+
+.base {
+    border-style: solid; 
+    margin: 1.7rem auto 0 auto;
+}
+.top {
+    width: 95%;
+}
+.middle {
+    width: 95%;
+}
+.bottom {
+    width: 95%;
+}
+.middle-base {
+    text-align: center;
+    width: 48%;
+    display: inline-block;
+    height: 90%;
+    margin: 9px;
+    
+}
+
