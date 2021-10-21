@@ -1,4 +1,6 @@
+import { API_CONFIG } from './../config/api_config';
 import { Component } from '@angular/core';
+import { LoginService } from 'src/service/login.service';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +10,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'my-pet-sitter';
   router: string = '';
+  isLogged = false;
+  localStorage = localStorage.getItem('localUser')
+constructor(private loginService: LoginService){}
 
 ngOnInit(): void {
   this.router = window.location.href.toString()
-  console.log(this.router)
+  if(this.router == `${API_CONFIG.baseUrl}/dashboard`) {
+    this.isLogged = true
+  }
 }
 
 }

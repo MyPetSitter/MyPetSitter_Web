@@ -1,3 +1,5 @@
+import { DadosPetsitterComponent } from './components/views/dados-petsitter/dados-petsitter/dados-petsitter.component';
+import { ServicoPetsitterComponent } from './components/views/servico-petsitter/servico-petsitter/servico-petsitter.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ComoFuncionaComponent } from './components/views/como-funciona/como-funciona.component';
@@ -29,9 +31,17 @@ const routes: Routes = [
     component: QueroSerPetsitterComponent
   },
   {
-    path: 'petsitterperfil',
+    path: 'dashboard',
     component: PetsitterPerfilComponent
   },
+  {
+    path: 'meusservicos',
+    component: ServicoPetsitterComponent
+  },
+  {
+    path: 'meusdados',
+    component: DadosPetsitterComponent
+  }
 
 ];
 
