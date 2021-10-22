@@ -31,6 +31,8 @@ import { FooterpsComponent } from './components/template/footerps/footerps/foote
 import { NavpsComponent } from './components/template/navps/navps/navps.component';
 import { ServicoPetsitterComponent } from './components/views/servico-petsitter/servico-petsitter/servico-petsitter.component';
 import { DadosPetsitterComponent } from './components/views/dados-petsitter/dados-petsitter/dados-petsitter.component';
+import { AuthInterceptorProvider } from './interceptors/auth-interceptor';
+import { UsuarioService } from 'src/service/domain/usuario.service';
 
 
 @NgModule({
@@ -70,7 +72,9 @@ import { DadosPetsitterComponent } from './components/views/dados-petsitter/dado
   ],
   providers: [
     LoginService,
+    UsuarioService,
     StorageService,
+    AuthInterceptorProvider,
     ErrorInterceptorProvider
   ],
   bootstrap: [AppComponent]
