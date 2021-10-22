@@ -1,3 +1,4 @@
+import { LoginService } from 'src/service/login.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
@@ -7,7 +8,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/template/header/header.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { FooterComponent } from './components/template/footer/footer.component';
-import { NavComponent } from './components/template/nav/nav.component';
 import { MatSidenavModule } from "@angular/material/sidenav";
 import {MatButtonModule} from '@angular/material/button';
 import { HomeComponent } from './components/views/home/home.component';
@@ -20,24 +20,36 @@ import {MatListModule} from '@angular/material/list';
 import { ComoFuncionaComponent } from './components/views/como-funciona/como-funciona.component';
 import {MatIconModule} from '@angular/material/icon';
 import { QueroSerPetsitterComponent } from './components/views/quero-ser-petsitter/quero-ser-petsitter.component';
-import { EntrarComponent } from './components/views/entrar/entrar.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { PetsitterPerfilComponent } from './components/views/petsitter-perfil/petsitter-perfil.component';
-
+import { EntrarComponent } from './components/views/entrar/entrar/entrar.component';
+import { StorageService } from 'src/service/storage.service';
+import { ErrorInterceptorProvider } from './interceptors/error-interceptor';
+import { HeaderpsComponent } from './components/template/headerps/headerps/headerps.component';
+import { FooterpsComponent } from './components/template/footerps/footerps/footerps.component';
+import { NavpsComponent } from './components/template/navps/navps/navps.component';
+import { ServicoPetsitterComponent } from './components/views/servico-petsitter/servico-petsitter/servico-petsitter.component';
+import { DadosPetsitterComponent } from './components/views/dados-petsitter/dados-petsitter/dados-petsitter.component';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    NavComponent,
     HomeComponent,
     CriarContaComponent,
     ComoFuncionaComponent,
     QueroSerPetsitterComponent,
-    EntrarComponent,
     PetsitterPerfilComponent,
+    EntrarComponent,
+    HeaderpsComponent,
+    FooterpsComponent,
+    NavpsComponent,
+    ServicoPetsitterComponent,
+    DadosPetsitterComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,8 +68,15 @@ import { PetsitterPerfilComponent } from './components/views/petsitter-perfil/pe
     MatIconModule,
     MatCheckboxModule,
     MatSlideToggleModule,
+    MatMenuModule,
+    MatDatepickerModule,
   ],
-  providers: [],
+  providers: [
+    LoginService,
+    StorageService,
+    ErrorInterceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+export const appRoutingProviders: any[] = [];

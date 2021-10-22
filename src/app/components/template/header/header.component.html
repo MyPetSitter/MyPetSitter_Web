@@ -3,9 +3,9 @@
     <span><a routerLink=""> <img src="assets/images/newlogo.png" alt=""></a></span>
     <div class="titulo"><span><h1>My PetSitter</h1></span></div>
     <nav class="mainmenu">
-            <a mat-button routerLink="comofunciona">Como funciona</a>
-            <a mat-button routerLink="queroserpetsitter">Quero ser PetSitter</a>
-            <a mat-button routerLink="criarconta">Criar conta</a>
-            <a mat-raised-button routerLink="entrar" color="warn">Entrar</a>
+        <a mat-button routerLink="comofunciona">Como funciona</a>
+        <a mat-button routerLink="queroserpetsitter">Quero ser PetSitter</a>
+        <a mat-button routerLink="criarconta">Criar conta</a>
+        <a mat-raised-button (click)="login()" color="warn">Entrar</a>
     </nav>    
 </mat-toolbar>

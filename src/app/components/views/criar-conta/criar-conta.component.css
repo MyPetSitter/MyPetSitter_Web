@@ -10,11 +10,10 @@
 .login-form .form-control, .login-form .btn {min-height: 38px;}
 .login-form .btn {
     font-size: 15px;
-    font-weight: bold;
     border-radius: 2px;
     width: 20%; 
-    color: #ff0059; 
-    background-color: #0802b5;
+    color: white; 
+    background-color: #1E1E1E;
 }
 form1 {
     text-align: center;

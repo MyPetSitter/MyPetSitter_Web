@@ -1,0 +1,17 @@
+img {
+    height: 4rem;
+}
+.header {
+    justify-content: left;
+    height: 10%;
+    background-color: rgb(20, 20, 20);
+}
+h1 {
+    padding-left: 1.2rem;
+    color: aliceblue;
+    font-size: 1.5rem;
+}
+span {
+    display: flex;
+    align-items: center;
+}

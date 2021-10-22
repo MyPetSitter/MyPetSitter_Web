@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  router: string = ''
   constructor() { }
 
   ngOnInit(): void {
+    
   }
-
+  login() {
+    window.location.href = 'http://localhost:4200/entrar'
+  }
 }

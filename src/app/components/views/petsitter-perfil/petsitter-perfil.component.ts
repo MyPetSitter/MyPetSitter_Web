@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./petsitter-perfil.component.css']
 })
 export class PetsitterPerfilComponent implements OnInit {
-
-  constructor() { }
-
+  tok = localStorage.getItem('localUser')
+  constructor() {}
+ 
   ngOnInit(): void {
+    console.log(this.tok)
   }
 
 }
