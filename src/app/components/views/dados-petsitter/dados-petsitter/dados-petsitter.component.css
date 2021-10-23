@@ -1,4 +1,4 @@
-.login-form {width: 650px;margin: 40px auto;}
+.login-form {width: 1000px;margin: 40px auto;}
 .login-form h2 {font-size: 19px;margin-bottom: 15px; margin-left: 20px;text-align: left;}
 .login-form form {        
     background: #f7f7f7;
@@ -7,7 +7,7 @@
     padding: 30px;
 } 
 .login-form .avatar {width: 90px;margin-bottom: 20px; align-items: left;}
-.login-form .form-control, .login-form .btn {min-height: 38px;}
+.login-form .form-control .login-form .btn {min-height: 38px;}
 .login-form .btn {
     font-size: 15px;
     border-radius: 2px;
@@ -20,11 +20,11 @@ form1 {
     width: 100%;
     margin: 1rem auto 0 auto;
 }
-.form1 {padding-left: 6px;width: 72%;}
+.form1 {padding-left: 6px;width: 49%;}
 form2 {
     text-align: center;
     position: relative;
     z-index: 2;
     width: 50px;
 }
-.form2 {padding: 6px;width: 35%;}
+.form2 {padding: 6px;width: 32%;}
