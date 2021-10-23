@@ -31,8 +31,13 @@ import { FooterpsComponent } from './components/template/footerps/footerps/foote
 import { NavpsComponent } from './components/template/navps/navps/navps.component';
 import { ServicoPetsitterComponent } from './components/views/servico-petsitter/servico-petsitter/servico-petsitter.component';
 import { DadosPetsitterComponent } from './components/views/dados-petsitter/dados-petsitter/dados-petsitter.component';
-import {MatMenuModule} from '@angular/material/menu';
+import { AuthInterceptorProvider } from './interceptors/auth-interceptor';
+import { UsuarioService } from 'src/service/domain/usuario.service';
+import { SobrenosComponent } from './components/views/sobrenos/sobrenos.component';
+import { ComoCriarUmaContaComponent } from './components/views/como-criar-uma-conta/como-criar-uma-conta.component';
+import { RecuperarContaComponent } from './components/views/recuperar-conta/recuperar-conta.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+
 
 @NgModule({
   declarations: [
@@ -50,6 +55,9 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     NavpsComponent,
     ServicoPetsitterComponent,
     DadosPetsitterComponent,
+    SobrenosComponent,
+    ComoCriarUmaContaComponent,
+    RecuperarContaComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,12 +76,13 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatIconModule,
     MatCheckboxModule,
     MatSlideToggleModule,
-    MatMenuModule,
     MatDatepickerModule,
   ],
   providers: [
     LoginService,
+    UsuarioService,
     StorageService,
+    AuthInterceptorProvider,
     ErrorInterceptorProvider
   ],
   bootstrap: [AppComponent]

@@ -5,6 +5,7 @@ import { API_CONFIG } from '../config/api_config';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { CredenciaisDTO } from 'src/model/credenciais.dto';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -29,7 +30,18 @@ export class LoginService {
     let tok = authorizationValue.substring(7)
     let user : LocalUser = {
         token : tok,
-        userName: this.jwtHelper.decodeToken(tok).sub
+        userName: this.jwtHelper.decodeToken(tok).sub,
+        tipo: this.jwtHelper.decodeToken(tok).sub
+    };
+    this.storage.setLocalUser(user)
+  }
+  successfulLogin2(authorizationValue: string) {
+    let tok = authorizationValue.substring(7)
+    const decodedToken = this.jwtHelper.decodeToken(tok)
+    let user : LocalUser = {
+        token : tok,
+        userName: this.jwtHelper.decodeToken(tok).sub,
+        tipo: this.jwtHelper.decodeToken(tok).sub
     };
     this.storage.setLocalUser(user)
   }

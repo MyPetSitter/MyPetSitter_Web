@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuarioDTO } from 'src/model/usuario.dto';
+import { UsuarioService } from 'src/service/domain/usuario.service';
+import { StorageService } from 'src/service/storage.service';
 
 @Component({
   selector: 'app-petsitter-perfil',
@@ -6,11 +9,35 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./petsitter-perfil.component.css']
 })
 export class PetsitterPerfilComponent implements OnInit {
-  tok = localStorage.getItem('localUser')
-  constructor() {}
+  usuario: UsuarioDTO = {
+    usuarioId: '',
+    userName: '',
+    nome: '',
+    email: '',
+    sobrenome: '',
+    cpf: '',
+    cnpj: '',
+    telefone: '',
+    cidade: '',
+    estado: '',
+    rua: '',
+    numero:'',
+    bairro: '',
+    cep: '',
+    tipo: '',
+    dataNascimento: ''
+  }
+  constructor(private usuarioService: UsuarioService, private storage:StorageService) {}
  
   ngOnInit(): void {
-    console.log(this.tok)
+    this.usuario.userName= this.storage.decodePayLoadJWT().sub
+    this.findByUserName()
+  }
+  findByUserName() {
+    this.usuarioService.findByUserName(this.usuario.userName).subscribe((resposta => {
+      this.usuario = resposta
+      console.log(this.usuario)
+    }))
   }
 
 }

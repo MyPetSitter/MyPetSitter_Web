@@ -22,6 +22,8 @@
 }
 .bottom {
     width: 95%;
+    height: 10%;
+    background: #f7f7f7;
 }
 .middle-base {
     text-align: center;
@@ -49,7 +51,7 @@ a:hover {
     text-decoration: underline;
 }
 a:visited {
-    color: #000000;
+    color: black;
 }
 
 .login-form {width: 80%; margin-top: 20px;}
