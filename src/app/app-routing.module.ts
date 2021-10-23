@@ -8,6 +8,9 @@ import { EntrarComponent } from './components/views/entrar/entrar/entrar.compone
 import { HomeComponent } from './components/views/home/home.component';
 import { PetsitterPerfilComponent } from './components/views/petsitter-perfil/petsitter-perfil.component';
 import { QueroSerPetsitterComponent } from './components/views/quero-ser-petsitter/quero-ser-petsitter.component';
+import { SobrenosComponent } from './components/views/sobrenos/sobrenos.component';
+import { ComoCriarUmaContaComponent } from './components/views/como-criar-uma-conta/como-criar-uma-conta.component';
+import { RecuperarContaComponent } from './components/views/recuperar-conta/recuperar-conta.component';
 
 const routes: Routes = [
   {
@@ -41,8 +44,19 @@ const routes: Routes = [
   {
     path: 'meusdados',
     component: DadosPetsitterComponent
-  }
-
+  },
+  {
+    path: 'sobrenos',
+    component: SobrenosComponent
+  },
+  {
+    path: 'comocriarumaconta',
+    component: ComoCriarUmaContaComponent
+  },
+  {
+    path: 'recuperarconta',
+    component: RecuperarContaComponent
+  },
 ];
 
 @NgModule({
