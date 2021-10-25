@@ -1,0 +1,33 @@
+<mat-sidenav-container class="container">
+    <mat-sidenav mode="side" opened class="menu">
+        <mat-nav-list>
+            <a routerLink= "/administrador" mat-list-item>
+                <i class="material-icons">home</i>
+                <font color= "white">Home</font>  
+            </a>
+            <a routerLink="/servicos" mat-list-item>
+                <i class="material-icons">work</i>
+                <font color= "white">Serviços</font>  
+            </a>
+            <a mat-list-item>
+                <i class="material-icons">people</i>
+                <font color= "white">Usuários</font>  
+            </a>
+            <a  mat-list-item>
+                <i class="material-icons">manage_accounts</i>
+                <font color= "white">Meus dados</font>  
+            </a>
+            <a routerLink="/categorias" mat-list-item>
+                <i class="material-icons">logout</i>
+                <font color= "white">Sair</font>  
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+       <router-outlet>
+
+       </router-outlet>
+       
+    </mat-sidenav-content>
+    
+</mat-sidenav-container>

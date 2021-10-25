@@ -1,0 +1,22 @@
+<form>
+    <h1>ATUALIZAR SERVIÇO</h1>
+    <mat-form-field class="form">
+        <mat-label>Nome</mat-label>
+        <input matInput [(ngModel)]="sps.nomeServico"  type="text" name="nome" disabled>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Preço</mat-label>
+        <input matInput [(ngModel)]="sps.preco" type="number" name="preco">
+    </mat-form-field>
+    <mat-form-field class="form">
+      <mat-label>Descrição</mat-label>
+          <textarea matInput [(ngModel)]="sps.descricao" type="text" name="descricaoUsuario" placeholder="Essa descrição será mostrada ao cliente que deseja contratar seu serviço. Ex: Aceito somente pets de porte pequeno ou médio.">
+          </textarea>
+     
+  </mat-form-field>
+  
+      <div class="buttons">
+          <button (click)="update()" class="mat-elevation-z8 " mat-flat-button color="primary">ATUALIZAR</button>
+          <button   class="mat-elevation-z8 " mat-flat-button color="warn">CANCELAR</button>
+      </div>
+  </form>
