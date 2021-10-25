@@ -33,10 +33,10 @@ import { ServicoPetsitterComponent } from './components/views/servico-petsitter/
 import { DadosPetsitterComponent } from './components/views/dados-petsitter/dados-petsitter/dados-petsitter.component';
 import { AuthInterceptorProvider } from './interceptors/auth-interceptor';
 import { UsuarioService } from 'src/service/domain/usuario.service';
-import { SobrenosComponent } from './components/views/sobrenos/sobrenos.component';
+import { SobrenosComponent } from './components/views/sobrenos/sobrenos/sobrenos.component';
 import { ComoCriarUmaContaComponent } from './components/views/como-criar-uma-conta/como-criar-uma-conta.component';
-import { RecuperarContaComponent } from './components/views/recuperar-conta/recuperar-conta.component';
-import {MatDatepickerModule} from '@angular/material/datepicker';
+import { RecuperarContaComponent } from './components/views/recuperar-conta/recuperar-conta/recuperar-conta.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 
 @NgModule({

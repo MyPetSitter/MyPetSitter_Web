@@ -1,0 +1,20 @@
+<div class="login-form" style="margin-left: 120px;">
+    <h1>Buscar um PetSitter</h1>
+    <form>   
+        <mat-form-field appearance="outline" class="form2">
+            <mat-label>Busque pelo seu endereço</mat-label>
+            <input matInput [formControl]="queryField" placeholder="Ex. Rua Blah Blah Blah">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form2">
+            <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+            <input matInput [formControl]="_dataInicioForm" [matDatepicker]="datepicker" placeholder="Selecione a data" name="data_inicio">
+            <mat-datepicker #datepicker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="form2">
+            <mat-datepicker-toggle matSuffix [for]="datepicker2"></mat-datepicker-toggle>
+            <input matInput [formControl]="_dataFimForm" [matDatepicker]="datepicker2" placeholder="Selecione a data" name="data_fim">
+            <mat-datepicker #datepicker2></mat-datepicker>
+        </mat-form-field>
+        <button mat-raised-button class="btn" (click)="teste()" style="margin-left: 310px; margin-top: 20px;">Buscar PetSitter</button>
+    </form>
+</div>

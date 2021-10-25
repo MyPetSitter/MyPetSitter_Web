@@ -1,0 +1,20 @@
+export interface UsuarioCadastroDTO {
+    usuarioId?: string,
+    userName: string,
+    nome: string,
+    email: string,
+    sobrenome: string,
+    cpf: string,
+    cnpj:string,
+    telefone: string,
+    cidade:string,
+    estado:string,
+    rua:string,
+    numero:string,
+    bairro:string,
+    cep:string,
+    dataNascimento:string,
+    dataCadastro:string,
+    senha: string,
+    tipo: string
+}
