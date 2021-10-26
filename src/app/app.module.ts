@@ -1,3 +1,7 @@
+import { ServicopetsitterCreateComponent } from './components/views/servicopetsitter-create/servicopetsitter-create/servicopetsitter-create.component';
+import { ServicosdisponiveisComponent } from './components/views/servicosdisponiveis/servicosdisponiveis/servicosdisponiveis.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { ServicoService } from './../service/domain/servico.service';
 import { LoginService } from 'src/service/login.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -23,20 +27,28 @@ import { QueroSerPetsitterComponent } from './components/views/quero-ser-petsitt
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { PetsitterPerfilComponent } from './components/views/petsitter-perfil/petsitter-perfil.component';
+import { HeaderclComponent } from './components/template/headercl/headercl/headercl.component';
 import { EntrarComponent } from './components/views/entrar/entrar/entrar.component';
 import { StorageService } from 'src/service/storage.service';
 import { ErrorInterceptorProvider } from './interceptors/error-interceptor';
 import { HeaderpsComponent } from './components/template/headerps/headerps/headerps.component';
+import { HeaderadmComponent } from './components/template/headeradm/headeradm/headeradm.component';
 import { FooterpsComponent } from './components/template/footerps/footerps/footerps.component';
 import { NavpsComponent } from './components/template/navps/navps/navps.component';
 import { ServicoPetsitterComponent } from './components/views/servico-petsitter/servico-petsitter/servico-petsitter.component';
+import { FooterclComponent } from './components/template/footercl/footercl/footercl.component';
 import { DadosPetsitterComponent } from './components/views/dados-petsitter/dados-petsitter/dados-petsitter.component';
+import { NavclComponent } from './components/template/navcl/navcl/navcl.component';
 import { AuthInterceptorProvider } from './interceptors/auth-interceptor';
 import { UsuarioService } from 'src/service/domain/usuario.service';
 import { SobrenosComponent } from './components/views/sobrenos/sobrenos/sobrenos.component';
 import { ComoCriarUmaContaComponent } from './components/views/como-criar-uma-conta/como-criar-uma-conta.component';
 import { RecuperarContaComponent } from './components/views/recuperar-conta/recuperar-conta/recuperar-conta.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { ServicoPetSitterService } from 'src/service/domain/servicopetsitter.service';
+import {MatTableModule} from '@angular/material/table';
+import { UpdateServicopetsitterComponent } from './components/views/update-servicopetsitter/update-servicopetsitter/update-servicopetsitter.component';
+import { DeleteServicopetsitterComponent } from './components/views/delete-servicopetsitter/delete-servicopetsitter/delete-servicopetsitter.component';
 
 
 @NgModule({
@@ -53,11 +65,19 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     HeaderpsComponent,
     FooterpsComponent,
     NavpsComponent,
+    ServicosdisponiveisComponent,
     ServicoPetsitterComponent,
     DadosPetsitterComponent,
     SobrenosComponent,
     ComoCriarUmaContaComponent,
     RecuperarContaComponent,
+    HeaderadmComponent,
+    HeaderclComponent,
+    FooterclComponent,
+    UpdateServicopetsitterComponent,
+    ServicopetsitterCreateComponent,
+    NavclComponent,
+    DeleteServicopetsitterComponent
   ],
   imports: [
     BrowserModule,
@@ -77,11 +97,15 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     MatCheckboxModule,
     MatSlideToggleModule,
     MatDatepickerModule,
+    MatTableModule
   ],
   providers: [
     LoginService,
     UsuarioService,
     StorageService,
+    ServicoPetSitterService,
+    ServicoService,
+    MatSnackBar,
     AuthInterceptorProvider,
     ErrorInterceptorProvider
   ],

@@ -1,3 +1,4 @@
+import { UsuarioDTO } from './../../model/usuario.dto';
 import { StorageService } from 'src/service/storage.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { API_CONFIG } from './../../config/api_config';
@@ -26,21 +27,10 @@ export class ServicoPetSitterService {
         return this.http.post<ServicoPetSitterDTO>(`${API_CONFIG.baseUrl}/servicopetsitter?petsitter=${obj.usuarioId}&servico=${obj.servicoId}`, obj)
     }
     delete(id:String) {
-        return this.http.delete(`${API_CONFIG.baseUrl}/${id}`)
+        return this.http.delete(`${API_CONFIG.baseUrl}/servicopetsitter/${id}`)
     }
-    update(obj: ServicoPetSitterDTO) : Observable<ServicoPetSitterDTO> {
-        return this.http.patch<ServicoPetSitterDTO>(`${API_CONFIG.baseUrl}/${obj.servicoPetSitterId}`, obj)
-    }
-    
-    successfulLogin(authorizationValue: string) {
-        let tok = authorizationValue.substring(7)
-        console.log('TOKEN' + tok)
-        let user : LocalUser = {
-            token : tok,
-            userName: this.jwtHelper.decodeToken(tok).sub,
-            tipo: this.jwtHelper.decodeToken(tok).sub
-        };
-        this.storage.setLocalUser(user)
+    update(servicoPetSitterId:String, obj: ServicoPetSitterDTO) : Observable<ServicoPetSitterDTO> {
+        return this.http.patch<ServicoPetSitterDTO>(`${API_CONFIG.baseUrl}/servicopetsitter/${servicoPetSitterId}`, obj)
     }
     mensagem(str:string) {
         this._snack.open(`${str}`, 'OK', {

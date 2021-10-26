@@ -1,3 +1,4 @@
+import { StorageService } from 'src/service/storage.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navps.component.css']
 })
 export class NavpsComponent implements OnInit {
-
-  constructor() { }
+  
+  constructor(private storage: StorageService) { }
 
   ngOnInit(): void {
   }

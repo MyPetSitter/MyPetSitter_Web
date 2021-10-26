@@ -11,8 +11,8 @@ import { ServicoPetSitterService } from 'src/service/domain/servicopetsitter.ser
   styleUrls: ['./servicopetsitter-create.component.css']
 })
 export class ServicopetsitterCreateComponent implements OnInit {
-  preco:String = ''
-  descricao:String = ''
+  preco:string = ''
+  descricao:string = ''
   servicoPetSitter: ServicoPetSitterDTO = {
     servicoPetSitterId: '',
     usuarioId: '',
@@ -48,6 +48,7 @@ export class ServicopetsitterCreateComponent implements OnInit {
     this.servicoPetSitterService.create(this.servicoPetSitter).subscribe((resposta => {
       this.servicoPetSitter = resposta
       this.servicoPetSitterService.mensagem("Inclusão de serviço realizada com sucesso!")
+      this.router.navigate(['meusservicos'])
     }), error=> {
       this.servicoPetSitterService.mensagem(error.message)
       for(var i = 0; i < error.errors.length; i++) {

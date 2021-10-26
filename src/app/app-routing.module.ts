@@ -1,3 +1,8 @@
+import { ClientePerfilComponent } from './components/views/cliente-perfil/cliente-perfil/cliente-perfil.component';
+import { DeleteServicopetsitterComponent } from './components/views/delete-servicopetsitter/delete-servicopetsitter/delete-servicopetsitter.component';
+import { UpdateServicopetsitterComponent } from './components/views/update-servicopetsitter/update-servicopetsitter/update-servicopetsitter.component';
+import { ServicopetsitterCreateComponent } from './components/views/servicopetsitter-create/servicopetsitter-create/servicopetsitter-create.component';
+import { ServicosdisponiveisComponent } from './components/views/servicosdisponiveis/servicosdisponiveis/servicosdisponiveis.component';
 import { DadosPetsitterComponent } from './components/views/dados-petsitter/dados-petsitter/dados-petsitter.component';
 import { ServicoPetsitterComponent } from './components/views/servico-petsitter/servico-petsitter/servico-petsitter.component';
 import { NgModule } from '@angular/core';
@@ -44,6 +49,22 @@ const routes: Routes = [
     component: ServicoPetsitterComponent
   },
   {
+    path: 'servicosdisponiveis/:id',
+    component: ServicosdisponiveisComponent
+  },
+  {
+    path: `servicosdisponiveis/:id/servicos/:id_servico/incluir`,
+    component: ServicopetsitterCreateComponent
+  },
+  {
+    path: 'servicopetsitter/:id/servico/:id_servicoPetSitter/update',
+    component: UpdateServicopetsitterComponent
+  },
+  {
+    path: 'servicopetsitter/:id/servico/:id_servicoPetSitter/delete',
+    component: DeleteServicopetsitterComponent
+  },
+  {
     path: 'meusdados',
     component: DadosPetsitterComponent
   },
@@ -62,6 +83,10 @@ const routes: Routes = [
   {
     path: 'admperfil',
     component: AdmPerfilComponent
+  },
+  {
+    path: 'cliente',
+    component: ClientePerfilComponent
   },
 ];
 

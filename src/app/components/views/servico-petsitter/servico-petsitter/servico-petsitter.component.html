@@ -1,1 +1,46 @@
-<p>servico-petsitter works!</p>
+<div class="content">
+    <div class="title">
+        <h1>MEUS SERVIÇOS</h1>
+    </div>
+    <button (click)="redirectToServicosDisponiveis()" class="mat-elevation-z8 " mat-flat-button color="primary">NOVO SERVIÇO</button>
+    <div class="mat-elevation-z8 content-table">
+        <table class="table" mat-table [dataSource]="servicos">
+          
+            <ng-container matColumnDef="id">
+              <th mat-header-cell *matHeaderCellDef> ID </th>
+             <a href="#"><td mat-cell *matCellDef="let row"> {{ row.servicoId }} </td></a>
+            </ng-container>
+          
+            <!-- Name Column -->
+            <ng-container matColumnDef="nome">
+              <th mat-header-cell *matHeaderCellDef> NOME </th>
+              <td mat-cell *matCellDef="let row">{{ row.nomeServico }}</td>
+            </ng-container>
+            
+            <!-- Weight Column -->
+            <ng-container matColumnDef="descricao">
+              <th mat-header-cell *matHeaderCellDef> DESCRIÇÃO </th>
+              <td mat-cell *matCellDef="let row"> {{ row.descricao }} </td>
+            </ng-container>
+          
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="acoes">
+              <th class="mat-header" mat-header-cell *matHeaderCellDef> AÇÕES </th>
+              <td mat-cell *matCellDef="let row">
+                <a class="edit" routerLink="/servicopetsitter/{{row.usuarioId}}/servico/{{row.servicoPetSitterId}}/update">
+                  <i class="material-icons">edit</i>
+                </a>
+                <a class="delete" routerLink="/servicopetsitter/{{row.usuarioId}}/servico/{{row.servicoPetSitterId}}/delete">
+                  <i class="material-icons">delete</i>
+                </a>
+                
+              </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+    </div>
+    
+      
+      
+</div>

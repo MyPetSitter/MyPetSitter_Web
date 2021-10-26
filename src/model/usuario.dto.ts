@@ -1,18 +1,18 @@
 export interface UsuarioDTO {
-    usuarioId: string;
-    userName: string;
-    nome: string;
-    email: string;
-    sobrenome: string
-    cpf: string
-    cnpj: string
-    telefone: string
-    cidade: string
-    estado: string
-    rua: string
-    numero:string
-    bairro: string
-    cep: string
-    tipo: string
-    dataNascimento: string
+    usuarioId: String
+    userName: String
+    nome: String
+    email: String
+    sobrenome: String
+    cpf: String
+    cnpj: String
+    telefone: String
+    cidade: String
+    estado: String
+    rua: String
+    numero:String
+    bairro: String
+    cep: String
+    tipo: String
+    dataNascimento: String
 }

@@ -11,38 +11,39 @@
         <div style="margin-top: 60px;">
           <mat-form-field appearance="outline" class="form2">
             <mat-label>Nome</mat-label>
-            <input matInput placeholder="Ex. Guilherme">
+            <input [(ngModel)]="usuario.nome" required  name="nome"  matInput placeholder="Ex. Guilherme">
           </mat-form-field>
           <mat-form-field appearance="outline" class="form2">
             <mat-label>Sobrenome</mat-label>
-            <input matInput placeholder="Ex. da Silva">
+            <input [(ngModel)]="usuario.sobrenome" required name="sobrenome" matInput placeholder="Ex. da Silva">
           </mat-form-field><br>
           <mat-form-field appearance="outline" class="form1">
             <mat-label>Username</mat-label>
-            <input matInput placeholder="Ex. Guilherme">
+            <input [(ngModel)]="usuario.userName" required name="userName" matInput placeholder="Ex. Guilherme">
           </mat-form-field><br>
-          <mat-form-field appearance="outline" class="form2">
+          <mat-form-field appearance="outline" required class="form2">
             <mat-label>Email</mat-label>
-            <input matInput placeholder="Ex. nome@dominio.com">
+            <input [(ngModel)]="usuario.email" required  name="email" matInput placeholder="Ex. nome@dominio.com">
           </mat-form-field>
           <mat-form-field appearance="outline" class="form2">
             <mat-label>Celular</mat-label>
-            <input matInput placeholder="Ex. (DDD) 9 99990000">
+            <input [(ngModel)]="usuario.telefone" required  name="telefone" matInput placeholder="Ex. (DDD) 9 99990000">
           </mat-form-field><br>
           <mat-form-field appearance="outline" class="form2">
             <mat-label>Senha</mat-label>
-            <input matInput placeholder="">
+            <input [(ngModel)]="usuario.senha" required  name="senha" matInput placeholder="" type="password">
           </mat-form-field>
           <mat-form-field appearance="outline" class="form2">
             <mat-label>Confirmar senha</mat-label>
-            <input matInput placeholder="">
+            <input [(ngModel)]="confirmarSenha" required  name="confirmarSenha"matInput placeholder="" type="password">
           </mat-form-field>
         </div>
         <div>
           <a href="entrar" style="text-align: left; margin-left: 6px;">Possuí conta? faça login</a>
-          <mat-slide-toggle style="margin-left: 145px;">Sou PetSitter!</mat-slide-toggle>
+          <mat-slide-toggle (change)="onChange($event)" style="margin-left: 145px;">Sou PetSitter!</mat-slide-toggle>
+         
         </div>
-      <button mat-raised-button class="btn" style="margin-left: 310px; margin-top: 20px;">Criar Conta</button>
+      <button (click)="insert()" mat-raised-button class="btn" style="margin-left: 310px; margin-top: 20px;">Criar Conta</button>
   </form>
   <p style="text-align: right;">
     <a href="comocriarumaconta">Ajuda</a>

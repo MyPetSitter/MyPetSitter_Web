@@ -1,4 +1,4 @@
-<div *ngIf="router != 'http://localhost:4200/dashboard'">
+<div *ngIf="router != 'http://localhost:4200/dashboard' && router != 'http://localhost:4200/dashboard' && router != 'http://localhost:4200/cliente'">
     <app-header *ngIf="router != 'http://localhost:4200/entrar'"></app-header>
     <router-outlet></router-outlet>
     <app-footer></app-footer>
@@ -7,4 +7,9 @@
     <app-headerps></app-headerps>
     <app-navps></app-navps>
     <app-footerps></app-footerps>
+</div>
+<div *ngIf="router == 'http://localhost:4200/cliente'" class="divcl">
+    <app-headercl></app-headercl>
+    <app-navcl></app-navcl>
+    <app-footercl></app-footercl>
 </div>
