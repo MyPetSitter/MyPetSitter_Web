@@ -1,0 +1,18 @@
+<div class="container">
+    <h1>RESUMO DA SOLICITAÇÃO</h1>
+    
+    <mat-card class="example-card mat-elevation-z8">
+        <mat-card-title>{{sps.nomePetSitter}}</mat-card-title>
+        <mat-card-subtitle>{{sps.nomeServico}}</mat-card-subtitle>
+        <mat-card-content>
+          <p>Preço por dia: R$ {{sps.preco}},00</p>
+          <p>{{sps.descricao}}</p>
+          <p>Data de início: {{obj.dataInicio}}</p>
+          <p>Data Final: {{obj.dataFim}}</p>
+          <p class="preco">Valor total: R$ {{precoServico}},00</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button (click)="create()" mat-button>CONFIRMAR SOLICITAÇÃO</button>
+        </mat-card-actions>
+      </mat-card>
+</div>

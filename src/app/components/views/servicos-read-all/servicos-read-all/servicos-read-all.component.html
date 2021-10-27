@@ -2,7 +2,7 @@
     <div class="title">
         <h1>SERVIÇOS DISPONÍVEIS</h1>
     </div>
-
+    <button routerLink="/novoServico" class="mat-elevation-z8 " mat-flat-button color="primary">NOVO SERVIÇO</button>
     <div class="mat-elevation-z8 content-table">
         <table class="table" mat-table [dataSource]="servicos">
           
@@ -27,7 +27,12 @@
             <ng-container matColumnDef="acoes">
               <th class="mat-header" mat-header-cell *matHeaderCellDef> AÇÕES </th>
               <td mat-cell *matCellDef="let row">
-                <button class="mat-elevation-z8 " mat-flat-button color="primary">EXCLUIR SERVIÇO</button>
+                <a routerLink="/servico/{{row.servicoId}}/update" class="edit">
+                  <i class="material-icons">edit</i>
+                </a>
+                <a routerLink="/servico/{{row.servicoId}}/delete" class="delete">
+                  <i class="material-icons">delete</i>
+                </a>
                 
               </td>
             </ng-container>

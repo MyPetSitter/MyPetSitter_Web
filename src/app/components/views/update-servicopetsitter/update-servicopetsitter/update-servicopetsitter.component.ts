@@ -10,9 +10,11 @@ import { ServicoPetSitterDTO2 } from 'src/model/servicopetsitter.dto2';
   styleUrls: ['./update-servicopetsitter.component.css']
 })
 export class UpdateServicopetsitterComponent implements OnInit {
+  servicoPetSitterId: String = ''
+  usuarioId: String = ''
   sps: ServicoPetSitterDTO = {
     servicoPetSitterId: '',
-    usuarioId: '',
+    petSitterId: '',
     servicoId: '',
     descricao: '',
     nomeServico: '',
@@ -22,22 +24,26 @@ export class UpdateServicopetsitterComponent implements OnInit {
   constructor(private servicoPetSitterService: ServicoPetSitterService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.sps.usuarioId = this.route.snapshot.paramMap.get('id')!
-    this.sps.servicoPetSitterId = this.route.snapshot.paramMap.get('id_servicoPetSitter')!
+    this.usuarioId = this.route.snapshot.paramMap.get('id')!
+    this.servicoPetSitterId = this.route.snapshot.paramMap.get('id_servicoPetSitter')!
     this.findServicoPetSitterById()
   }
   findServicoPetSitterById() {
-    this.servicoPetSitterService.findServicoPetSitterById(this.sps.servicoPetSitterId).subscribe((resposta => {
+    this.servicoPetSitterService.findServicoPetSitterById(this.servicoPetSitterId as string).subscribe((resposta => {
       this.sps = resposta
     }))
   }
   update() {
-    this.servicoPetSitterService.update(this.sps).subscribe((resposta => {
-      //this.servicoPetSitterService.successfulLogin(resposta.headers.get('Authorization') as string)
+   
+    this.servicoPetSitterService.update(this.servicoPetSitterId,this.sps).subscribe((resposta => {
+      this.sps = resposta
       this.servicoPetSitterService.mensagem('Serviço atualizado com sucesso!')
-      this.router.navigate([`servicopetsitter/${this.sps.usuarioId}`])
+      this.router.navigate([`/meusservicos`])
     }), error => {
       console.log(error)
     })
+  }
+  cancel() {
+    this.router.navigate(['meusservicos'])
   }
 }

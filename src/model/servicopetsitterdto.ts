@@ -1,6 +1,6 @@
 export interface ServicoPetSitterDTO {
     servicoPetSitterId: String,
-    usuarioId: String,
+    petSitterId: String,
     servicoId: String,
     descricao: String,
     nomeServico: String,

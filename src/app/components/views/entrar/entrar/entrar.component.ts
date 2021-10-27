@@ -27,6 +27,7 @@ export class EntrarComponent implements OnInit {
     telefone: '',
     cidade: '',
     estado: '',
+    endereco:'',
     rua: '',
     numero:'',
     bairro: '',
@@ -45,15 +46,18 @@ export class EntrarComponent implements OnInit {
       //this.router.navigate(['/dashboard'])
       this.verificarTipoUsuario()
     }), error => {
-      console.log(error)
+      this.loginService.mensagem(error.message)
+      
     })
   }
   verificarTipoUsuario() {
     this.usuarioService.findByUserName(this.credenciais.userName).subscribe((resposta => {
       this.usuario = resposta
       if(this.usuario.tipo === "p") {
-        console.log(this.usuario.tipo)
-        var url = "http://" + window.location.host + "/dashboard"
+        var url = "http://" + window.location.host + `/dashboard`
+        window.location.href = url
+      } else {
+        url = "http://" + window.location.host + `/cliente`
         window.location.href = url
       }
     }))   

@@ -10,6 +10,7 @@ import { ServicoService } from 'src/service/domain/servico.service';
 })
 export class ServicosdisponiveisComponent implements OnInit {
   servicos: Servico[] = []
+  displayedColumns: string[] = ['id', 'nome', 'descricao', 'acoes']
   servico: Servico = {
     servicoId: '',
     nome: '',
@@ -17,7 +18,6 @@ export class ServicosdisponiveisComponent implements OnInit {
   }
   usuarioId: String = ''
   servicoId: String = ''
-  displayedColumns: string[] = ['id', 'nome', 'descricao', 'acoes']
   constructor(private service: ServicoService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {

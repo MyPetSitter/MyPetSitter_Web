@@ -1,0 +1,18 @@
+<div class="login-form" style="margin-left: 120px;">
+    <h1>Buscar por Serviços</h1>
+    <form>   
+        <mat-form-field appearance="outline" class="form2" style="margin-right: 20px; margin-left: 70px;">
+            <mat-label>Busque pela sua cidade</mat-label>
+            <input required [(ngModel)]="cidade" matInput [formControl]="queryField" placeholder="Ex.Guarapuava">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Serviço</mat-label>
+          <mat-select required name="servico" [(ngModel)]="selectedValue">
+            <mat-option *ngFor="let servico of servicos" [value]= "servico.servicoId">
+              {{servico.nome}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <button mat-raised-button class="btn" (click)="redirectToBusca()" style=" margin-left: 20px;"><span class="material-icons">search</span>Buscar Serviços</button>
+    </form>
+</div>

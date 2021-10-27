@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ClientePerfilComponent } from './cliente-perfil.component';
+import { UsuarioDeleteAllComponent } from './usuario-delete-all.component';
 
-describe('ClientePerfilComponent', () => {
-  let component: ClientePerfilComponent;
-  let fixture: ComponentFixture<ClientePerfilComponent>;
+describe('UsuarioDeleteAllComponent', () => {
+  let component: UsuarioDeleteAllComponent;
+  let fixture: ComponentFixture<UsuarioDeleteAllComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ClientePerfilComponent ]
+      declarations: [ UsuarioDeleteAllComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ClientePerfilComponent);
+    fixture = TestBed.createComponent(UsuarioDeleteAllComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

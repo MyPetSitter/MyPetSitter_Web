@@ -1,3 +1,4 @@
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Administrador } from './../../model/administrador';
 import { Observable } from 'rxjs';
 import { CredenciaisAdm } from './../../model/credenciais-adm.dto';
@@ -9,7 +10,7 @@ import { Injectable } from "@angular/core";
 
 export class AdministradorService {
 
-    constructor(private http: HttpClient){}
+    constructor(private http: HttpClient, private _snack: MatSnackBar){}
 
     entrar(obj: CredenciaisAdm) {
         return this.http.post(`${API_CONFIG.baseUrl}/administradores/auth`, obj, {responseType: 'text'})
@@ -19,5 +20,12 @@ export class AdministradorService {
     }
     findById(admId:String) : Observable<Administrador> {
         return this.http.get<Administrador>(`${API_CONFIG.baseUrl}/administradores/${admId}`)
+    }
+    mensagem(str:string) {
+        this._snack.open(`${str}`, 'OK', {
+            horizontalPosition: 'end',
+            verticalPosition: 'top',
+            duration: 3000
+        })
     }
 }

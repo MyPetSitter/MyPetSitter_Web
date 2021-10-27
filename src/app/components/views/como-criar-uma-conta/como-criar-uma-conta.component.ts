@@ -1,3 +1,4 @@
+import { UsuarioService } from 'src/service/domain/usuario.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComoCriarUmaContaComponent implements OnInit {
 
-  constructor() { }
+  constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit(): void {
+  }
+  create() {
+    this.usuarioService
   }
 
 }

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PetsitterServicoComponent } from './petsitter-servico.component';
+import { ServicoUpdateAllComponent } from './servico-update-all.component';
 
-describe('PetsitterServicoComponent', () => {
-  let component: PetsitterServicoComponent;
-  let fixture: ComponentFixture<PetsitterServicoComponent>;
+describe('ServicoUpdateAllComponent', () => {
+  let component: ServicoUpdateAllComponent;
+  let fixture: ComponentFixture<ServicoUpdateAllComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PetsitterServicoComponent ]
+      declarations: [ ServicoUpdateAllComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PetsitterServicoComponent);
+    fixture = TestBed.createComponent(ServicoUpdateAllComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

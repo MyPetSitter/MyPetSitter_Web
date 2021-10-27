@@ -1,3 +1,4 @@
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { JwtHelper } from 'angular2-jwt';
 import { StorageService } from './storage.service';
 import { LocalUser } from './../model/local_user';
@@ -14,7 +15,7 @@ export class LoginService {
 
   jwtHelper : JwtHelper = new JwtHelper();
 
-  constructor(private http:HttpClient, public storage: StorageService) { }
+  constructor(private http:HttpClient, public storage: StorageService, private _snack: MatSnackBar) { }
 
   authenticate(credenciais:CredenciaisDTO) {
     return this.http.post(
@@ -31,7 +32,6 @@ export class LoginService {
     let user : LocalUser = {
         token : tok,
         userName: this.jwtHelper.decodeToken(tok).sub,
-        tipo: this.jwtHelper.decodeToken(tok).sub
     };
     this.storage.setLocalUser(user)
   }
@@ -41,10 +41,16 @@ export class LoginService {
     let user : LocalUser = {
         token : tok,
         userName: this.jwtHelper.decodeToken(tok).sub,
-        tipo: this.jwtHelper.decodeToken(tok).sub
     };
     this.storage.setLocalUser(user)
   }
+  mensagem(str:string) {
+    this._snack.open(`${str}`, 'OK', {
+        horizontalPosition: 'end',
+        verticalPosition: 'top',
+        duration: 3000
+    })
+}
   isLogged() {
     return this.storage.getLocalUser()
   }
