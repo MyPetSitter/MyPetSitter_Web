@@ -1,0 +1,17 @@
+<div class="container" *ngIf="servicos.length > 0">
+    <h1>{{servicos.length}} Profissionais encontrados em {{cidade}}</h1>
+    
+    <mat-card class="example-card mat-elevation-z8 " *ngFor="let servico of servicos">
+        <mat-card-title>{{servico.nomePetSitter}} {{servico.sobrenome}}</mat-card-title>
+        <mat-card-subtitle>{{servico.nomeServico}}</mat-card-subtitle>
+        <mat-card-content>
+          <p class="preco">R$ {{servico.preco}},00 POR DIA</p>
+          <p>{{servico.descricao}}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button routerLink="/solicitacaodetails/{{servico.usuarioId}}/servico/{{servico.servicoId}}/periodo" mat-button>Solicitar</button>
+        </mat-card-actions>
+      </mat-card>
+</div>
+<div *ngIf="servicos.length == 0"><h1>Nenhum profissional encontrado :(</h1></div>
+

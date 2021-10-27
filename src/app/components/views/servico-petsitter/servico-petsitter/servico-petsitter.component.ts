@@ -23,6 +23,7 @@ export class ServicoPetsitterComponent implements OnInit {
     sobrenome: '',
     cpf: '',
     cnpj: '',
+    endereco: '',
     telefone: '',
     cidade: '',
     estado: '',

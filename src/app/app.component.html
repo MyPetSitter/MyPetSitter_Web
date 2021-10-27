@@ -1,15 +1,23 @@
-<div *ngIf="router != 'http://localhost:4200/dashboard' && router != 'http://localhost:4200/dashboard' && router != 'http://localhost:4200/cliente'">
-    <app-header *ngIf="router != 'http://localhost:4200/entrar'"></app-header>
+<div *ngIf="router != 'http://localhost:4200/dashboard'&& router != 'http://localhost:4200/cliente' && router !=  'http://localhost:4200/adm'">
+    <app-header *ngIf="router != 'http://localhost:4200/entrar' && router !=  'http://localhost:4200/auth'"></app-header>
     <router-outlet></router-outlet>
     <app-footer></app-footer>
 </div>
 <div *ngIf="router == 'http://localhost:4200/dashboard'" class="divps">
     <app-headerps></app-headerps>
     <app-navps></app-navps>
+    <router-outlet></router-outlet>
     <app-footerps></app-footerps>
 </div>
 <div *ngIf="router == 'http://localhost:4200/cliente'" class="divcl">
     <app-headercl></app-headercl>
     <app-navcl></app-navcl>
+    <router-outlet></router-outlet>
     <app-footercl></app-footercl>
+</div>
+<div *ngIf="router == 'http://localhost:4200/adm'" class="divadm">
+    <app-headeradm></app-headeradm>
+    <app-navadm></app-navadm>
+    <router-outlet></router-outlet>
+    <app-footeradm></app-footeradm>
 </div>

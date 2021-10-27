@@ -1,1 +1,70 @@
-<p>dados-petsitter works!</p>
+<div class="login-form">
+    <form> 
+      <!--
+        NOME, USERNAME, TELEFONE, CPF, CNPJ, DTNASCIMENTO,SENHA, CEP,
+          CIDADE, ESTADO, ENDERECO, BAIRRO,   
+
+      -->
+          <div>
+            <a routerLink="" routerLinkActive="active">
+              <img src="/assets/images/logoSemEscrita.png" align="left" class="img-circle avatar" alt="Avatar">
+            </a>
+            <h2 align="center" style="margin-left: 10px;">Olá {{usuario.nome}}, essas são suas Informações Pessoais!</h2>
+          </div>    
+          <div style="margin-top: 80px;">
+            <mat-form-field appearance="outline" class="form1">
+              <mat-label>Nome</mat-label>
+              <input [(ngModel)]="usuario.nome" matInput placeholder="Ex. Guilherme" name="nome">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="form1">
+              <mat-label>Sobrenome</mat-label>
+              <input [(ngModel)]="usuario.sobrenome" matInput placeholder="Ex. da Silva" name="sobrenome">
+            </mat-form-field><br>
+            <mat-form-field appearance="outline" class="form2">
+              <mat-label>CPF</mat-label>
+              <input [(ngModel)]="usuario.cpf" matInput placeholder="Ex. da Silva" name="cpf">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="form2">
+              <mat-label>CNPJ</mat-label>
+              <input [(ngModel)]="usuario.cnpj" matInput name="cnpj">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="form2">
+              <mat-label>Data de Nascimento</mat-label>
+              <input [(ngModel)]="usuario.dataNascimento" matInput placeholder="Ex. da Silva" name="dataNascimento">
+            </mat-form-field><br>
+            <mat-form-field appearance="outline" class="form1">
+              <mat-label>Email</mat-label>
+              <input [(ngModel)]="usuario.email" matInput placeholder="Ex. nome@dominio.com" name="email">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="form1">
+              <mat-label>Celular</mat-label>
+              <input [(ngModel)]="usuario.telefone" matInput placeholder="Ex. 42999990000" name="telefone">
+            </mat-form-field><br>
+            <mat-form-field appearance="outline" class="form2">
+              <mat-label>Username</mat-label>
+              <input [(ngModel)]="usuario.userName" matInput placeholder="Ex.josesilva" name="username">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="form2">
+              <mat-label>CEP</mat-label>
+              <input [(ngModel)]="usuario.cep" matInput placeholder="" name="cep">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="form2">
+              <mat-label>Endereço</mat-label>
+              <input [(ngModel)]="usuario.endereco" matInput placeholder="" name="endereco">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="form2">
+              <mat-label>Bairro</mat-label>
+              <input [(ngModel)]="usuario.bairro" matInput placeholder="" name="bairro">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="form1">
+              <mat-label>Cidade</mat-label>
+              <input [(ngModel)]="usuario.cidade" matInput placeholder="" name="cidade">
+            </mat-form-field>
+            <mat-form-field appearance="outline" class="form1">
+              <mat-label>Estado</mat-label>
+              <input [(ngModel)]="usuario.estado" matInput placeholder="" name="estado">
+            </mat-form-field> <br>
+            <button (click)="update()" mat-raised-button class="btn" style=" margin-top: 10px;">Atualizar</button>
+          </div>
+    </form>
+</div>

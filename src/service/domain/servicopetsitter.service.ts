@@ -10,6 +10,7 @@ import { ServicoPetSitter } from 'src/model/servicopetsitter';
 import { ServicoPetSitterDTO2 } from 'src/model/servicopetsitter.dto2';
 import { LocalUser } from 'src/model/local_user';
 import { JwtHelper } from 'angular2-jwt';
+import { ServicoPetSitterDTO3 } from 'src/model/servicopetsiter.dto3';
 
 @Injectable()
 
@@ -24,7 +25,7 @@ export class ServicoPetSitterService {
         return this.http.get<ServicoPetSitterDTO>(`${API_CONFIG.baseUrl}/servicopetsitter/${id}`)
     } 
     create(obj: ServicoPetSitterDTO) : Observable<ServicoPetSitterDTO> {
-        return this.http.post<ServicoPetSitterDTO>(`${API_CONFIG.baseUrl}/servicopetsitter?petsitter=${obj.usuarioId}&servico=${obj.servicoId}`, obj)
+        return this.http.post<ServicoPetSitterDTO>(`${API_CONFIG.baseUrl}/servicopetsitter?petsitter=${obj.petSitterId}&servico=${obj.servicoId}`, obj)
     }
     delete(id:String) {
         return this.http.delete(`${API_CONFIG.baseUrl}/servicopetsitter/${id}`)
@@ -39,7 +40,10 @@ export class ServicoPetSitterService {
             duration: 3000
         })
     }
-    findByPetSitterAndServico(obj:ServicoPetSitter) : Observable<ServicoPetSitter> {
-        return this.http.get<ServicoPetSitter>(`${API_CONFIG.baseUrl}/servicopetsitter/${obj.usuarioId}?servico=${obj.servicoId}`)
+    findByPetSitterAndServico(usuarioId:string, servicoId:string) : Observable<ServicoPetSitterDTO3> {
+        return this.http.get<ServicoPetSitterDTO3>(`${API_CONFIG.baseUrl}/servicopetsitter/usuario/${usuarioId}?servico=${servicoId}`)
     }
+    findByServicoAndCidade(servicoId:number, cidade:string) : Observable<ServicoPetSitterDTO3[]>{
+        return this.http.get<ServicoPetSitterDTO3[]>(`${API_CONFIG.baseUrl}/servicopetsitter/servicos?s=${servicoId}&c=${cidade}`)
+    } 
 }

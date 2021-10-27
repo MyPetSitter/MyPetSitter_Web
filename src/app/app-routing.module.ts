@@ -1,4 +1,12 @@
-import { ClientePerfilComponent } from './components/views/cliente-perfil/cliente-perfil/cliente-perfil.component';
+import { ServicosDeleteAllComponent } from './components/views/servicos-delete-all/servicos-delete-all/servicos-delete-all.component';
+import { ServicoUpdateAllComponent } from './components/views/servico-update-all/servico-update-all/servico-update-all.component';
+import { ServicoCreateAllComponent } from './components/views/servico-create-all/servico-create-all/servico-create-all.component';
+import { UsuariosReadAllComponent } from './components/views/usuarios-read-all/usuarios-read-all/usuarios-read-all.component';
+import { ServicosReadAllComponent } from './components/views/servicos-read-all/servicos-read-all/servicos-read-all.component';
+import { SolicitacaoservicoCreateComponent } from './components/views/solicitacaoservico-create/solicitacaoservico-create/solicitacaoservico-create.component';
+import { DetalhesSolicitacaoservicoComponent } from './components/views/detalhes-solicitacaoservico/detalhes-solicitacaoservico/detalhes-solicitacaoservico.component';
+import { BuscarServicopetsitterComponent } from './components/views/buscar-servicopetsitter/buscar-servicopetsitter/buscar-servicopetsitter.component';
+import { PerfilClienteComponent } from './components/views/perfil-cliente/perfil-cliente/perfil-cliente.component';
 import { DeleteServicopetsitterComponent } from './components/views/delete-servicopetsitter/delete-servicopetsitter/delete-servicopetsitter.component';
 import { UpdateServicopetsitterComponent } from './components/views/update-servicopetsitter/update-servicopetsitter/update-servicopetsitter.component';
 import { ServicopetsitterCreateComponent } from './components/views/servicopetsitter-create/servicopetsitter-create/servicopetsitter-create.component';
@@ -17,6 +25,8 @@ import { SobrenosComponent } from './components/views/sobrenos/sobrenos/sobrenos
 import { ComoCriarUmaContaComponent } from './components/views/como-criar-uma-conta/como-criar-uma-conta.component';
 import { RecuperarContaComponent } from './components/views/recuperar-conta/recuperar-conta/recuperar-conta.component';
 import { AdmPerfilComponent } from './components/views/adm-perfil/adm-perfil/adm-perfil.component';
+import { EntrarAdmComponent } from './components/views/entrar-adm/entrar-adm/entrar-adm.component';
+import { ServicosCreateAllComponent } from './components/views/servicos-create-all/servicos-create-all/servicos-create-all.component';
 
 
 const routes: Routes = [
@@ -81,12 +91,48 @@ const routes: Routes = [
     component: RecuperarContaComponent
   },
   {
-    path: 'admperfil',
+    path: 'adm',
     component: AdmPerfilComponent
   },
   {
     path: 'cliente',
-    component: ClientePerfilComponent
+    component: PerfilClienteComponent
+  },
+  {
+    path: 'servicos/:id/cidade/:city/busca',
+    component: BuscarServicopetsitterComponent
+  },
+  {
+    path: 'solicitacaodetails/:id_petsitter/servico/:id_servico/periodo',
+    component: DetalhesSolicitacaoservicoComponent
+  },
+  {
+    path:'solicitacao/:id/servico/:id_servico/preco/:p/datainicio/:data_inicio/datafim/:data_fim/petsitter/:id_petsitter/create',
+    component: SolicitacaoservicoCreateComponent
+  },
+  {
+    path: 'auth',
+    component: EntrarAdmComponent
+  },
+  {
+    path: 'servicos/all',
+    component: ServicosReadAllComponent
+  },
+  {
+    path: 'usuarios/all',
+    component: UsuariosReadAllComponent
+  },
+  {
+    path: 'novoServico',
+    component: ServicosCreateAllComponent
+  },
+  {
+    path: 'servico/:id/update',
+    component: ServicoUpdateAllComponent
+  },
+  {
+    path: 'servico/:id/delete',
+    component: ServicosDeleteAllComponent
   },
 ];
 

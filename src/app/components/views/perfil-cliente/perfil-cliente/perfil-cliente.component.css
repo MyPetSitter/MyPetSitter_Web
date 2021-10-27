@@ -5,7 +5,7 @@ h1 {
 .login-form .btn {
     font-size: 15px;
     border-radius: 2px;
-    width: 15%; 
+    width: 18%; 
     color: white; 
     background-color: #1E1E1E;
     margin-right: 20px;
@@ -13,4 +13,4 @@ h1 {
 .login-form {width: 80%; margin-top: 20px;}
 .login-form h2 {font-size: 19px;margin-bottom: 15px;text-align: center;}
 .login-form .avatar {width: 90px;margin-bottom: 20px; align-items: left;}
-.login-form .form-control, .login-form .btn {min-height: 38px;}
+.login-form .form-control, .login-form .btn {min-height: 28px;}

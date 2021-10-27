@@ -1,0 +1,40 @@
+<form>
+    <h1>PERÍODO DO SERVIÇO</h1>
+    <h2>Informações do prestador do serviço</h2>
+    <mat-form-field class="form">
+        <mat-label>Nome</mat-label>
+        <input [(ngModel)]="sps.nomePetSitter" matInput  type="text" name="nome" disabled>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Sobrenome</mat-label>
+        <input [(ngModel)]="sps.sobrenome" matInput  type="text" name="sobbrenome" disabled>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Serviço</mat-label>
+        <input [(ngModel)]="sps.nomeServico" matInput type="text" name="servico" disabled>
+    </mat-form-field>
+    <mat-form-field class="form">
+        <mat-label>Preço por dia</mat-label>
+        <input [(ngModel)]="sps.preco" matInput type="number" name="preco" disabled>
+    </mat-form-field>
+    <mat-form-field class="form">
+      <mat-label>Descrição</mat-label>
+          <textarea [(ngModel)]="sps.descricao" matInput type="text" name="descricaoUsuario" placeholder="Essa descrição será mostrada ao cliente que deseja contratar seu serviço. Ex: Aceito somente pets de porte pequeno ou médio." disabled>
+          </textarea>
+  </mat-form-field>
+  <mat-form-field appearance="outline" class="datepicker">
+    <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+    <input matInput [formControl]="_dataInicioForm" [matDatepicker]="datepicker" placeholder="Selecione a data de início" name="data_inicio">
+    <mat-datepicker #datepicker></mat-datepicker>
+</mat-form-field>
+<mat-form-field appearance="outline" class="datepicker">
+    <mat-datepicker-toggle matSuffix [for]="datepicker2"></mat-datepicker-toggle>
+    <input matInput [formControl]="_dataFimForm" [matDatepicker]="datepicker2" placeholder="Selecione a data final" name="data_fim">
+    <mat-datepicker #datepicker2></mat-datepicker>
+</mat-form-field>
+  
+      <div class="buttons">
+          <button (click)="redirectToSolicitacaoCreate()" class="mat-elevation-z8 " mat-flat-button color="primary">IR PARA ÚLTIMA ETAPA</button>
+          <button class="mat-elevation-z8 " mat-flat-button color="warn">CANCELAR</button>
+      </div>
+  </form>

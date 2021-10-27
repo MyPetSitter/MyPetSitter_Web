@@ -14,7 +14,7 @@ export class UpdateServicopetsitterComponent implements OnInit {
   usuarioId: String = ''
   sps: ServicoPetSitterDTO = {
     servicoPetSitterId: '',
-    usuarioId: '',
+    petSitterId: '',
     servicoId: '',
     descricao: '',
     nomeServico: '',

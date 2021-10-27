@@ -9,6 +9,7 @@ export interface UsuarioDTO {
     telefone: String
     cidade: String
     estado: String
+    endereco:String
     rua: String
     numero:String
     bairro: String

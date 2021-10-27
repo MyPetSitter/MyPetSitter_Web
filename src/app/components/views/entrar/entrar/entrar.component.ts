@@ -27,6 +27,7 @@ export class EntrarComponent implements OnInit {
     telefone: '',
     cidade: '',
     estado: '',
+    endereco:'',
     rua: '',
     numero:'',
     bairro: '',

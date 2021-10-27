@@ -13,7 +13,7 @@ export class DeleteServicopetsitterComponent implements OnInit {
   servicoPetSitterId: String = ''
   sps: ServicoPetSitterDTO = {
     servicoPetSitterId: '',
-    usuarioId: '',
+    petSitterId: '',
     servicoId: '',
     descricao: '',
     nomeServico: '',

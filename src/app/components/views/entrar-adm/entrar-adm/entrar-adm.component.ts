@@ -27,7 +27,7 @@ export class EntrarAdmComponent implements OnInit {
   entrar() {
     this.admService.entrar(this.adm).subscribe((resposta => {
       if(resposta === "" || resposta === null) {
-        console.log('non')
+        this.admService.mensagem('Usuário ou senha inválidos!')
       } else {
         this.findByUserName()
         this.redirectToPerfilAdm()
@@ -44,7 +44,7 @@ export class EntrarAdmComponent implements OnInit {
     }))
   }
   redirectToPerfilAdm() {
-    var url = "http://" + window.location.host + `/administrador`
+    var url = "http://" + window.location.host + `/adm`
     window.location.href = url
   }
 }

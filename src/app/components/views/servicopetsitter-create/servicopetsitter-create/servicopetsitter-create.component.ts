@@ -15,7 +15,7 @@ export class ServicopetsitterCreateComponent implements OnInit {
   descricao:string = ''
   servicoPetSitter: ServicoPetSitterDTO = {
     servicoPetSitterId: '',
-    usuarioId: '',
+    petSitterId: '',
     servicoId: '',
     nomeServico: '',
     descricao: '',
@@ -43,7 +43,7 @@ export class ServicopetsitterCreateComponent implements OnInit {
   create() {
     this.servicoPetSitter.preco = this.preco
     this.servicoPetSitter.descricao = this.descricao
-    this.servicoPetSitter.usuarioId = this.route.snapshot.paramMap.get('id')!
+    this.servicoPetSitter.petSitterId = this.route.snapshot.paramMap.get('id')!
     this.servicoPetSitter.servicoId = this.route.snapshot.paramMap.get('id_servico')!
     this.servicoPetSitterService.create(this.servicoPetSitter).subscribe((resposta => {
       this.servicoPetSitter = resposta
